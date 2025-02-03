@@ -15,6 +15,8 @@ import Devices from './customComponents/rooms/devices';
 import AccountsPage from './customComponents/accountManage/AccountsPage';
 import AccInfo from './customComponents/accountManage/AccInfo';
 import DeviceControlPage from './customComponents/rooms/DeviceControlPage';
+import BeatiMain from './customComponents/beati/beatiMain';
+import MyGreenhouse from './customComponents/beati/myGreenhouse';
 
 // Layout component that includes the Navbar
 const AuthenticatedLayout = ({ children }: { children: React.ReactNode }) => {
@@ -66,11 +68,11 @@ const App = () => {
           </AuthenticatedLayout>
         } /> {/* Room page */}
 
-<Route path="/devices/:roomId/:deviceId" element={
-  <AuthenticatedLayout>
-    <DeviceControlPage />
-  </AuthenticatedLayout>
-} />
+        <Route path="/devices/:roomId/:deviceId" element={
+          <AuthenticatedLayout>
+            <DeviceControlPage />
+          </AuthenticatedLayout>
+        } />
 
         <Route path="/stats" element={
           <AuthenticatedLayout>
@@ -89,6 +91,18 @@ const App = () => {
             <AccInfo />
           </AuthenticatedLayout>
         } /> {/* AccountInfo page */}
+
+        <Route path="/beati" element={
+          <AuthenticatedLayout>
+            <BeatiMain />
+          </AuthenticatedLayout>
+        } /> {/* beati page */}
+
+        <Route path="/myGreenhouse" element={
+          <AuthenticatedLayout>
+            <MyGreenhouse />
+          </AuthenticatedLayout>
+        } /> {/* greenhouse page */}
       
       </Routes>
 

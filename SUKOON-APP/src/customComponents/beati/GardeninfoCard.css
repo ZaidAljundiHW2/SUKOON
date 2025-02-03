@@ -1,0 +1,23 @@
+.infoCardBoxGarden {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -100%);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.whatisGH {
+    font-family: 'SpotifyFont', 'sans-serif';
+    background: transparent;
+    color: #3627ba;
+    text-align: center;
+}

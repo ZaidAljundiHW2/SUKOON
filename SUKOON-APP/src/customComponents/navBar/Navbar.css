@@ -1,20 +1,37 @@
+/* Base navbar styling */
+.navContainer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    color: white;
+    z-index: 1000; /* Keeps it above other content */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Optional: adds shadow for visibility */
+    border-radius: 20px; /* Add border-radius for rounded corners */
+}
+
+/* Navbar buttons styling */
+.navButton {
+    background: transparent;
+    width: auto;
+    height: auto;
+    color: #21334a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile-specific styling */
 @media (max-width: 480px) {
     .navContainer {
-        width: 100%;
-        background-color: orange;
-        z-index: 2;
-        position: fixed;
-        border-radius: 20px;
+        background-color: orange; /* Temporary background color for visibility */
+        border-radius: 20px; /* Ensures the navbar retains rounded corners */
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-
     }
     
     .navButton {
-        z-index: 2;
-        background: transparent;
-        width: auto;
-        height: auto;
-        color: black;
-        
+        color: black; /* Ensure text color is black for visibility */
     }
 }
+

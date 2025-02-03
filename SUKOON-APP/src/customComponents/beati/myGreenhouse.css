@@ -1,0 +1,99 @@
+/* Container for greenhouse content */
+
+
+.myGContainer {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    position: relative;
+    margin-top: 5%;
+}
+
+.gardenCont {
+    position: relative;
+    width: 100%;
+    height: auto; /* Ensure it covers at least the full viewport height */
+    overflow: auto;
+    z-index: 0; /* Create a new stacking context */
+}
+
+.gardenCont::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url("./beatiBack.png"); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Place the background behind the content */
+}
+
+/* Back button styling */
+.beatiBackButton {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #3627ba;
+    position: fixed;  /* Changed from absolute to fixed */
+    top: 5%;  /* Ensure it's visible at the top of the screen */
+    left: 5%;  /* Space from the left */
+    border-radius: 50%;
+    z-index: 1000;  /* Ensure it stays on top of other elements */
+}
+
+/* Greenhouse heading styling */
+.greenhouseHead {
+    background: transparent;
+    color: #3627ba;
+    font-family: 'SpotifyFont', 'sans-serif';
+    font-size: 150%;
+}
+
+/* Information button styling */
+.gardenInfo {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: white;
+    position: fixed;  /* Changed from absolute to fixed */
+    top: 5%;  /* Ensure it's visible at the top-right of the screen */
+    right: 5%;  /* Space from the right */
+    border-radius: 50%;
+    z-index: 1000;  /* Ensure it stays on top of other elements */
+}
+
+/* Styling for flower info boxes */
+.flowerInfo {
+    width: 25%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+/* Styling for flower info stacks */
+.flowerInfoStack {
+    margin-top: 5%;
+    margin-left: 5%;
+    color: black;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+    .beatiBackButton,
+    .gardenInfo {
+        width: 50px;  /* Ensure buttons are not too big */
+        height: 50px;  /* Adjust button size */
+    }
+
+    .flowerInfo {
+        width: 40%;  /* Adjust flower info box size for smaller screens */
+    }
+}

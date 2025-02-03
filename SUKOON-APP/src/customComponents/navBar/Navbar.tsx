@@ -20,7 +20,7 @@ const Navbar = () => {
     }
 
     const goToBeati = () => {
-        navigate('/Beati')
+        navigate('/beati')
     }
 
     const goToStats = () => {
@@ -30,6 +30,8 @@ const Navbar = () => {
     const goToAccount = () => {
         navigate('/Account')
     }
+
+    
 
   return (
     <Box

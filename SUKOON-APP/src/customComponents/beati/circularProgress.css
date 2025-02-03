@@ -1,0 +1,43 @@
+.circular-progress {
+    position: relative;
+    display: inline-block;
+    background: transparent; /* Ensure no background color */
+    border: none; /* Ensure no border */
+    z-index: 1;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+    background: transparent;
+    z-index: 2; /* Progress bar on top */
+  }
+  
+  .progress-ring-circle,
+  .progress-ring-circle-background {
+    transform-origin: 50% 50%;
+  }
+  
+  .progress-ring-circle-background {
+    stroke: #e6e6e6; /* Light grey background color */
+  }
+  
+  .progress-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure the container fills the circular area */
+    height: 100%; /* Ensure the container fills the circular area */
+    overflow: hidden; /* Prevent the image from overflowing */
+    border-radius: 50%; /* Make the container circular */
+    z-index: -1; /* Image stays behind the progress ring */
+  }
+  
+  .progress-image img {
+    width: 100%; /* Make the image fill the container width */
+    height: 100%; /* Make the image fill the container height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
